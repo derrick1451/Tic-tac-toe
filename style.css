@@ -1,0 +1,126 @@
+/* resst default  stylesheets  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    flex-direction: column;
+    position: relative;
+    background-color: #14bdac;
+    height: 100vh;
+}
+h1 {
+    z-index: 3;
+    color: white;
+}
+.board {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    background-color: #14bdac;
+    text-align: center;
+
+}
+.board-items {
+    color: white;
+    font-style: italic;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 5rem;
+    cursor: pointer;
+}
+.board-items:nth-child(1),
+.board-items:nth-child(2),
+.board-items:nth-child(3)
+{   
+    border-top: none;
+}
+.board-items:nth-child(1),.board-items:nth-child(4),
+.board-items:nth-child(7){
+    border-left: none;
+}
+.board-items:nth-child(7),
+.board-items:nth-child(8),
+.board-items:nth-child(9) {
+    border-bottom: none;
+}
+.board-items:nth-child(9),
+.board-items:nth-child(6),
+.board-items:nth-child(3){
+    border-right: none;
+}
+ .game-mode {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #14bdac;
+    /* backdrop-filter: blur(6px);
+    mix-blend-mode: multiply;
+    z-index: 1; */
+ }
+ .game-mode.grid {
+     backdrop-filter: blur(6px);
+    mix-blend-mode: multiply;
+    z-index: 2;
+
+ }
+.game-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.game-btn button {
+    padding: 15px 15px;
+    font-size: 1rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    font-style: italic;
+    background-color: 
+    #6366f1;
+    color: white;
+}
+.restart {
+    display: none;
+    position: absolute;
+    bottom: -290px;
+    right: -40px;
+}
+h2 {
+    display: none;
+    font-weight: 600;
+    font-size: 3rem;
+}
+.form {
+    display: flex;
+    gap: 20px;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 6px;
+}
+input {
+    padding: 10px;
+    font-family: inherit;
+    font-size: 100%;
+}
